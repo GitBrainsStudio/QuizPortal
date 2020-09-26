@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "quiz-portal"
+    }
+  },
+  "defaultProject": "quiz-portal",
+  "cli": {
+    "analytics": false
+  }
 }
