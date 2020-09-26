@@ -1,0 +1,12 @@
+<div class="container pt-5 pb-5">
+        <h4>Вопрос {{ index +1 }} из {{ data.Questions.length }}</h4>
+        <h2> {{ data.Questions[index].Text }}</h2>
+        <mat-radio-group class="radio-group" [(ngModel)]="selected" [disabled]="selected">
+            <mat-radio-button [value]="a" *ngFor="let a of data.Questions[index].Answers">{{ a.Text }}</mat-radio-button>
+
+            <p *ngIf="selected">{{ selected.Comment }}</p>
+
+        </mat-radio-group>
+        <button mat-raised-button color="accent" (click)="next()" *ngIf="!lastQuestion" [disabled]="!selected">Следующий вопрос</button>
+        <button mat-raised-button color="accent" (click)="next()" *ngIf="lastQuestion" [disabled]="!selected">Перейти к результатам</button>
+</div>

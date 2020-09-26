@@ -1,1 +1,10 @@
-<p>home works!</p>
+
+<main>
+    <app-top-menu></app-top-menu>
+    <ng-container *ngIf="$data | async as data">
+    
+    <quiz-collection [data]="data"></quiz-collection>
+    
+    </ng-container>
+</main>
+<app-footer></app-footer>

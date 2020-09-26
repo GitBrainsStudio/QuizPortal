@@ -1,0 +1,118 @@
+
+
+<!-- <div class="row d-flex justify-content-center">
+    <div *ngFor="let quiz of data" class="box" [routerLink]="['/quiz', quiz.Guid]">
+        <div class="d-flex justify-content-center" style="height: 100%">
+            <div class="row">
+                <div class="col-lg-8" style="border-radius: 5px 0 0 5px; height: 100%;  display: flex; flex-direction: column; ">
+                    <h2>{{ quiz.Title }}</h2>
+                     <p>{{ quiz.Description }}</p> 
+                 </div>
+                 <div class="col-lg-4" style="border-radius: 0 5px 5px 0; height: 100%; display: flex; justify-content: center; align-items: center;">
+                     <img src="../../../assets/Images/dev-icon.png" style="width: 150px;">
+                 </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+ -->
+
+
+ 
+<!--  <div class="container pt-5 pb-5">
+     <div class="d-flex justify-content-start" style="overflow-x: auto;">
+        <div *ngFor="let quiz of data" class="quiz-box" [routerLink]="['/quiz', quiz.Guid]">
+            <div class="d-flex justify-content-center" style="height: 100%">
+                <div class="col">
+                    <div class="p-3">
+                        <h3>{{ quiz.Title }}</h3>
+                        <p>{{ quiz.Description }}</p>
+                    </div>
+                    <div >
+                         <img src="../../../assets/Images/oop.jpg" style="width: 150px;">
+                     </div>
+                </div>
+            </div>
+        </div>
+     </div>
+ </div> -->
+
+
+
+
+
+
+<!-- 
+ <div class="row d-flex justify-content-around">
+
+ </div> -->
+
+
+
+ <!-- <div class="quiz-list">
+    <div *ngFor="let quiz of data" class="quiz-box" [routerLink]="['/quiz', quiz.Guid]">
+  
+    </div>
+ </div> -->
+
+
+ <div class="quiz-list pt-5 pb-5">
+    <div *ngFor="let quiz of data" class="quiz-box" [routerLink]="['/quiz', quiz.Guid]">
+        <div class="d-flex justify-content-center" style="height: 100%">
+            <div class="col">
+                <div class="p-3">
+                    <h3>{{ quiz.Title }}</h3>
+                    <p>{{ quiz.Description }}</p>
+                </div>
+                <div >
+                     <img src="../../../assets/Images/oop.jpg" style="width: 150px;">
+                 </div>
+            </div>
+        </div>
+    </div>
+ </div>
+
+ 
+
+<style>
+
+    .quiz-list
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+/*         padding-top: 3rem !important;
+        padding-bottom: 3rem !important; */
+    }
+
+
+
+    .quiz-box
+    {
+        box-shadow: 0 1.6px 3.6px 0 var(--box-shadow-medium),0 .3px .9px 0 var(--box-shadow-light);
+        border-radius: 5px;
+     /*    margin-top: 10px; */
+/*         max-width: 600px; */
+        margin: 5px;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .quiz-box:hover
+    {
+        cursor: pointer;
+        box-shadow: 0 3.6px 7.6px 0 var(--box-shadow-medium),0 .8px .9px 0 var(--box-shadow-light);
+    }
+
+
+    @media screen and (max-width: 768px) {
+        .quiz-box
+        {
+            text-align: center;
+        }
+    }
+
+
+</style>
