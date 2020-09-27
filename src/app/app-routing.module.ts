@@ -11,7 +11,7 @@ const routes: Routes = [
         path: '',  component : HomeComponent,
       },
       {
-        path : ':id', component : QuizComponent
+        path : ':id', component: QuizComponent
       }
     ]
   },

@@ -1,12 +1,28 @@
-<div class="container pt-5 pb-5">
+<div class="container pt-5 pb-5" @opacityAnimation>
+    <ng-container *ngIf="!resultView; else result">
+        <h1 class="mb-5">{{ data.Title }}</h1>
         <h4>Вопрос {{ index +1 }} из {{ data.Questions.length }}</h4>
         <h2> {{ data.Questions[index].Text }}</h2>
         <mat-radio-group class="radio-group" [(ngModel)]="selected" [disabled]="selected">
             <mat-radio-button [value]="a" *ngFor="let a of data.Questions[index].Answers">{{ a.Text }}</mat-radio-button>
 
-            <p *ngIf="selected">{{ selected.Comment }}</p>
+            <ng-container *ngIf="selected">
+                <p>
+                    <span *ngIf="selected.Type == 2">Верно!</span>
+                    <span *ngIf="selected.Type == 1">Неправильно!</span>
+                    {{ selected.Comment }}
+                </p>
+            </ng-container>
 
         </mat-radio-group>
         <button mat-raised-button color="accent" (click)="next()" *ngIf="!lastQuestion" [disabled]="!selected">Следующий вопрос</button>
-        <button mat-raised-button color="accent" (click)="next()" *ngIf="lastQuestion" [disabled]="!selected">Перейти к результатам</button>
+        <button mat-raised-button color="accent" (calick)="next()" *ngIf="lastQuestion" [disabled]="!selected" (click)="showResult()">Перейти к результатам</button>
+    </ng-container>
 </div>
+
+
+<ng-template #result>
+    <h3>Ваши результаты теста.</h3>
+    <p>{{ rightCount }} из {{ data.Questions.length }} верных ответов. </p>
+    <a routerLink="">Вернуться к списку квизов.</a>
+</ng-template>

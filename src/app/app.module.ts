@@ -12,6 +12,7 @@ import { QuizComponent } from './Pages/quiz/quiz.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './Layout/footer/footer.component';
 import { TopMenuComponent } from './Layout/top-menu/top-menu.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TopMenuComponent } from './Layout/top-menu/top-menu.component';
     AppRoutingModule,
     HttpClientModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

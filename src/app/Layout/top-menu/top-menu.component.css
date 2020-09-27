@@ -26,21 +26,13 @@ li
     margin-right: 10px;
 }
 
-a {
-    font-family: var(--font-sans-serif);
-    list-style: none;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    border-bottom: 1px solid var(--blue-transparent);
-    transition: .3s;
-    color: var(--blue);
-    border-bottom-color: var(--blue-transparent);
+.logo-text
+{
+    outline: 0;
 }
 
-a:hover
+.logo-text:hover
 {
+    cursor: pointer;
     color: var(--red);
-    transition: .3s;
 }
