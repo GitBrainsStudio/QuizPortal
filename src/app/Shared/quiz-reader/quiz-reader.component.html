@@ -1,7 +1,7 @@
 <div class="container pt-5 pb-5" @opacityAnimation>
     <ng-container *ngIf="!resultView; else result">
-        <h1 class="mb-5">{{ data.Title }}</h1>
-        <h4 class="mb-1">Вопрос {{ index +1 }} из {{ data.Questions.length }}</h4>
+        <h1 class="mb-2">{{ data.Title }}</h1>
+        <h4 class="mb-5">Вопрос {{ index +1 }} из {{ data.Questions.length }}</h4>
         <h2 class="mb-2"> {{ data.Questions[index].Text }}</h2>
         <mat-radio-group class="radio-group" [(ngModel)]="selected" [disabled]="selected">
             <mat-radio-button [value]="a" *ngFor="let a of data.Questions[index].Answers">{{ a.Text }}</mat-radio-button>
